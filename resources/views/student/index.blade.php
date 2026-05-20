@@ -48,6 +48,6 @@
             </div>
             <!-- /.row -->
         </div><!-- /.container-fluid -->
-        <a href="{{ route('student.addstud') }}" class="btn btn-success">Add New Student</a>
+        <a href="{{ route('student.addstudent') }}" class="btn btn-success">Add New Student</a>
     </div>
 @endsection

@@ -40,7 +40,7 @@
                             <label for="dob">Date of Birth</label>
                             <input type="date" class="form-control" id="dob" name="dob" required>
                         </div>
-                        <button type="submit" class="btn btn-primary">Add Student</button>
+                        <button type="submit" class="btn btn-success col-12">Add Student</button>
                     </form>
                 </div>
             </div>
