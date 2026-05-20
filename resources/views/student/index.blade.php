@@ -12,7 +12,7 @@
     </div>
     <!-- /.content-header -->
 
-<!-- Main content -->
+    <!-- Main content -->
     <div class="content">
         <div class="container-fluid">
             <div class="row">
@@ -29,12 +29,15 @@
                                 <thead>
                                 </thead>
                                 <tbody>
-                                 {{-- @foreach($student) --}}
-                                    <tr>
-                                        <td>Matthew Bartolomeo</td>
-                                        <td>matthewbartolomeo@sample.com</td>
-                                    </tr>
-                                {{-- @endforeach --}}
+                                    @foreach($Students as $student)
+                                        <tr>
+                                            <td>{{ $student->fname }}</td>
+                                            <td>{{ $student->lname }}</td>
+                                            <td>{{ $student->mname }}</td>
+                                            <td>{{ $student->add }}</td>
+                                            <td>{{ $student->dobirth }}</td>
+                                        </tr>
+                                    @endforeach
                                 </tbody>
                             </table>
                         </div>

@@ -2,9 +2,10 @@
 
 namespace App\Models;
 
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class studentmngt extends Model
+class Studentmngt extends Model
 {
     use HasFactory;
     protected $table = '3a_tbl';
@@ -15,5 +16,5 @@ class studentmngt extends Model
         'mname',
         'add',
         'dobirth',
-    ]
+    ];
 }
