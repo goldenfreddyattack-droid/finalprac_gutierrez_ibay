@@ -27,6 +27,14 @@
 
                             <table class="table">
                                 <thead>
+                                    <tr>
+                                        <th>First Name</th>
+                                        <th>Last Name</th>
+                                        <th>Middle Name</th>
+                                        <th>Address</th>
+                                        <th>Date of Birth</th>
+                                        <th>Actions</th>
+                                    </tr>
                                 </thead>
                                 <tbody>
                                     @foreach($Students as $student)
@@ -36,6 +44,16 @@
                                             <td>{{ $student->mname }}</td>
                                             <td>{{ $student->add }}</td>
                                             <td>{{ $student->dobirth }}</td>
+                                            <td>
+                                                <a href="{{ route('student.edit', $student->id) }}"
+                                                    class="btn btn-sm btn-primary">Edit</a>
+                                                <form action="{{ route('student.destroy', $student->id) }}" method="POST"
+                                                    style="display:inline-block; margin:0;">
+                                                    @csrf
+                                                    @method('DELETE')
+                                                    <button type="submit" class="btn btn-sm btn-danger">Delete</button>
+                                                </form>
+                                            </td>
                                         </tr>
                                     @endforeach
                                 </tbody>
