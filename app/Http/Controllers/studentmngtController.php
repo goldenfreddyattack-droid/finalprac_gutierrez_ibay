@@ -17,4 +17,22 @@ class studentmngtController extends Controller
     {
         return view('student.create');
     }
+    public function addstudent()
+    {
+        return view('student.addstudent');
+    }
+    public function store(Request $request)
+    {
+        $request->validate([
+            'fname' => 'required',
+            'lname' => 'required',
+            'mname' => 'required',
+            'add' => 'required',
+            'dobirth' => 'required',
+        ]);
+
+        Studentmngt::create($request->all());
+        return redirect()->route('student.index')->with('success', 'Student created successfully.');
+    }
+
 }
